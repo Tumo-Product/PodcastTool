@@ -1,5 +1,5 @@
 .loading {
-    animation: imageLoading 0.5s ease;
+    animation: imageLoading 1.5s ease;
     animation-fill-mode: forwards;
 }
 
@@ -9,8 +9,13 @@
         transform: rotate(0deg);
     }
 
-    100% {
+    50% {
         opacity: 0;
-        transform: rotate(180deg);
+        transform: rotate(360deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
     }
 }

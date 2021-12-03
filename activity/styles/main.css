@@ -16,6 +16,10 @@
     left: 900px !important;
 }
 
+.offscreenLeft {
+    right: 900px !important;
+}
+
 .onTop {
     top: 30px !important;
 }
@@ -118,7 +122,9 @@ audio {
 }
 
 .image {
-    /* transition: 0.5s; */
+    transition: 0.5s;
+    transform: rotate(0deg);
+    opacity: 1;
     position: absolute;
     height: 174px;
     width: 174px;
@@ -225,6 +231,7 @@ audio {
     background-color: #F3F3F3;
     box-shadow: 2px 2px 2px 0 rgba(222,222,230,0.5), -2px -2px 2px 0 #FEFEFE;
     transition: 0.8s;
+    right: 36px;
     
     display: flex;
     justify-content: center;
@@ -243,4 +250,51 @@ audio {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+#starters {
+    height: fit-content;
+    width: 496px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    top: 218px;
+    left: 36px;
+
+    overflow: visible;
+}
+
+.pushedLeft {
+    margin-right: 1100px !important;
+}
+
+.starter {
+    transition: 0s;
+    width: 496px;
+    height: 78px;
+    
+    border-radius: 11px;
+    background-color: #F3F3F3;
+    box-shadow: 2px 2px 2px 0 rgba(222,222,230,0.5), -2px -2px 2px 0 #FEFEFE;
+    transition: 0.5s;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starter p {
+    width: 90%;
+    height: 80%;
+    font-size: 18px;
+    line-height: 24px;
+    color: #5C7CA6;
+    
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
 }

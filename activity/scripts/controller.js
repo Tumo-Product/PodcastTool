@@ -3,7 +3,7 @@ const controller = {
     reviewing:  false,
     playing:    false,
     paused:     false,
-    
+
     interval:   undefined,
     pauseInterval: undefined,
     timePaused: 0,
@@ -11,7 +11,7 @@ const controller = {
     setup: async () => {
         $("#centerBtn").click(controller.recordClickHandler);
         $("#leftBtn").click(controller.pauseClickHandler);
-        $("audio")[0].addEventListener("ended", function() {
+        document.getElementById("myAudio").addEventListener("ended", function() {
             view.replaceButton("centerBtn", "play");
             controller.playing = false;
         })
@@ -22,7 +22,6 @@ const controller = {
 
         if (controller.recording) {
             controller.record();
-            document.getElementById("voiceover").pause();
         } else {
             controller.stopRecording();
         }
@@ -40,12 +39,10 @@ const controller = {
 
     setupReview: async () => {
         $("#controller .button").unbind("click");
-        $(`#${currentGuest}Video`).prop("muted", false);
 
         $("#leftBtn").click(function () {
             controller.cancel();
-            currBaseVideo = null;
-            videoManager.attachStream(camStream, currentGuest);
+            currBaseAudio = null;
         });
 
         $("#centerBtn").click(controller.togglePlay);
@@ -54,7 +51,6 @@ const controller = {
 
     cancel: async () => {
         $("#controller .button").unbind("click");
-        $(`#${currentGuest}Video`).prop("muted", true);
         $("#centerBtn").click(controller.recordClickHandler);
         $("#leftBtn").click(controller.pauseClickHandler);
 
@@ -66,24 +62,17 @@ const controller = {
         controller.playing = !controller.playing;
         
         if (controller.playing) {
-            videoManager.play(currentGuest);
+            audioManager.play("my");
             view.replaceButton("centerBtn", "pause");
         } else {
-            videoManager.pause(currentGuest);
+            audioManager.pause("my");
             view.replaceButton("centerBtn", "play");
         }
     },
 
     complete: async () => {
-        let oldGuest = currentGuest;
         controller.cancel();
-        let attach = await handleAnswer();
-
-        await timeout(500);
-        
-        if (attach) {
-            videoManager.attachStream(camStream, oldGuest);
-        }
+        handleAnswer();
     },
 
     record : async () => {
@@ -157,9 +146,8 @@ const controllerView = {
         view.replaceButton("leftBtn", "pause");
         $("#leftBtn").addClass("deactivated");
     },
-    moveRecorder: async (where) => {
-        $("#recorder").removeClass("recorderLeft recorderRight");
-        $("#recorder").addClass(where === "left" ? "recorderLeft" : "recorderRight");
+    moveRecorderDown: async () => {
+        $("#recorder").css("top", "+=88");
     },
     updateProgress    : async (progress) => {
         $("#progress").css("--value", progress);
