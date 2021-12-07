@@ -1,4 +1,9 @@
 {
+    "taskDir" : "fashion",
+    "intro": "Instruction for this tool<br>Instruction for this tool<br>Instruction for this tool<br>Instruction for this tool",
+    "recordingInstruction": "recording Instruction for this tool<br>Instruction for this tool<br>Instruction for this tool<br>Instruction for this tool",
+    "funInstruction": "fun Instruction for this tool<br>Instruction for this tool<br>Instruction for this tool<br>Instruction for this tool",
+
     "topics": [
         "Combien de fois par semaine achètes-tu une bouteille d'eau en plastique ? Recherche en ligne combien de ces bouteilles sont achetées chaque année.",
         "Recherche en ligne les 6R et nomme-les. Quels sont ceux que tu utilises le plus ?",

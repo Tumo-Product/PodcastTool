@@ -23,7 +23,7 @@ const audioManager = {
     },
 
     getRandomFile: async (directory) => {
-        let file = await network.getRandomFile(directory);
+        let file = await network.getRandomFile(data.taskDir, directory);
         file = "data:audio/wav;base64," + file;
         return file;
     },

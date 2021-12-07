@@ -24,7 +24,7 @@
 }
 
 #recorder {
-    transition: 1s;
+    transition: 0.5s;
     width: 266px;
     height: 51px;
     border-radius: 48.5px;

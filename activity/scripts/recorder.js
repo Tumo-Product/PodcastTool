@@ -13,14 +13,8 @@ class Recorder {
     }
 
     async getBaseAudio() {
-        let fr   = new FileReader();
         let file = this.getBlob();
-
-        let basedat = await (new Promise((resolve)=>{
-            fr.readAsDataURL(file);
-            fr.onloadend = () => { resolve(fr.result); }
-        }));
-
+        let basedat = await getBase64(file);
         return basedat;
     }
 

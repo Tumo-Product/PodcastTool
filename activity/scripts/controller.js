@@ -12,9 +12,9 @@ const controller = {
         $("#centerBtn").click(controller.recordClickHandler);
         $("#leftBtn").click(controller.pauseClickHandler);
         document.getElementById("myAudio").addEventListener("ended", function() {
-            view.replaceButton("centerBtn", "play");
+            view.replaceButton("centerBtn", "#play");
             controller.playing = false;
-        })
+        });
     },
 
     recordClickHandler: async () => {
@@ -43,6 +43,7 @@ const controller = {
         $("#leftBtn").click(function () {
             controller.cancel();
             currBaseAudio = null;
+            currFile = null;
         });
 
         $("#centerBtn").click(controller.togglePlay);
@@ -63,10 +64,10 @@ const controller = {
         
         if (controller.playing) {
             audioManager.play("my");
-            view.replaceButton("centerBtn", "pause");
+            view.replaceButton("centerBtn", "#pause");
         } else {
             audioManager.pause("my");
-            view.replaceButton("centerBtn", "play");
+            view.replaceButton("centerBtn", "#play");
         }
     },
 
@@ -130,20 +131,20 @@ const controllerView = {
     },
     stopRecording: async () => {
         $("#centerBtn").removeClass("recording");
-        view.replaceButton("leftBtn", "cancel");
-        view.replaceButton("centerBtn", "play");
+        view.replaceButton("leftBtn", "#cancel");
+        view.replaceButton("centerBtn", "#play");
         $("#rightBtn").removeClass("invisible");
     },
     pause: async () => {
-        view.replaceButton("leftBtn", "record");
+        view.replaceButton("leftBtn", "#record");
     },
     resume: async () => {
-        view.replaceButton("leftBtn", "pause");
+        view.replaceButton("leftBtn", "#pause");
     },
     cancel: async () => {
         $("#rightBtn").addClass("invisible");
-        view.replaceButton("centerBtn", "record");
-        view.replaceButton("leftBtn", "pause");
+        view.replaceButton("centerBtn", "#record");
+        view.replaceButton("leftBtn", "#pause");
         $("#leftBtn").addClass("deactivated");
     },
     moveRecorderDown: async () => {

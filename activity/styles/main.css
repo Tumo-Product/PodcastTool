@@ -113,6 +113,14 @@ audio {
     cursor: pointer;
 }
 
+.frame:hover .image {
+    opacity: 0.7;
+}
+
+.frame:active .image {
+    opacity: 0.5;
+}
+
 .insideFrame {
     position: absolute;
     height: 174px;
@@ -151,9 +159,47 @@ audio {
     font-size: 17px;
     line-height: 25px;
     color: #436980;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.closedHalfway {
+    width: 63px !important;
+}
+
+#rating {
+    position: absolute;
+    top: 491px;
+    height: 60px;
+    width: 150px;
+    border-radius: 7px;
+    background-color: #F3F3F3;
+    box-shadow: inset -2px -2px 2px 0 #FEFEFE, inset 2px 2px 2px 0 rgba(222,222,230,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#rating .button {
+    position: relative;
+    border-radius: 5px !important;
+    background-color: #F3F3F3;
+    box-shadow: 2px 2px 2px 0 rgba(222,222,230,0.5), -2px -2px 2px 0 #FEFEFE !important;
+}
+
+#reject { height: 20px; }
+#award { height: 17px; }
+
+.closed #rejectBtn, .closed #awardBtn {
+    pointer-events: none;
 }
 
 #randomizerContainer {
@@ -167,7 +213,7 @@ audio {
 
     display: flex;
     align-items: center;
-    transition: 0.7s;
+    transition: 0.5s;
     overflow: hidden;
     padding: 10px;
 }
@@ -238,6 +284,12 @@ audio {
     align-items: center;
 }
 
+#topic img {
+    position: absolute;
+    height: 86px;
+    transition: 0.2s;
+}
+
 #topic p {
     width: 752px;
     height: 110px;
@@ -295,6 +347,49 @@ audio {
     color: #5C7CA6;
     
     display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+#shuffleTopic {
+    position: absolute;
+    top: 518px;
+    transition: 0.5s !important;
+
+    width: 37px !important;
+    height: 37px !important;
+}
+
+ #shuffleTopic .inside {
+    box-shadow: -1px 1px 1px 0 rgba(254,254,254,0.48) !important;
+ }
+
+#shufflePlay {
+    margin-left: 3px;
+    width: 14px;
+}
+
+#checkboxes {
+    width: 825px;
+    height: 28px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 182px;
+
+    position: absolute;
+    top: 422px;
+}
+
+.checkbox {
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+    background-color: #F3F3F3;
+    box-shadow: 1px 1px 1px 0 rgba(222,222,230,0.5), -1px -1px 1px 0 #FEFEFE;
+    display: flex;
+    justify-content: center;
     align-items: center;
     transition: 0.2s;
 }

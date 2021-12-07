@@ -17,7 +17,7 @@ const initialize = () => {
                 if (window.location.href.includes("examiner")) {
                     const { data } = event.data;
                     let outcome = data.answers[0];
-                    startPlayback(outcome);
+                    onPageLoad(outcome);
                 }
             break;
         }
@@ -35,6 +35,14 @@ const setAnswers = (outcome) => {
         application: 'activity-manager',
         message: 'set-answers',
         data: { answers: [outcome] }
+    }, '*');
+}
+
+const examine = (status) => {
+    window.parent.postMessage({
+        application: 'activity-manager',
+        message: 'auto-examine',
+        data: { status: status }
     }, '*');
 }
 
