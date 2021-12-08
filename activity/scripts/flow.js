@@ -13,6 +13,7 @@ let startedFun = false;
 let selected = [false, false, false, false];
 
 let playing = -1;
+let audioOrder = -1;
 
 const onPageLoad = async (outcome) => {
     data = await network.getData();
@@ -20,11 +21,12 @@ const onPageLoad = async (outcome) => {
     recorder = new Recorder(audioStream);
     controller.setup();
     view.setInstructionText(data.intro);
+    let examinerCondition = window.location.href.includes("examiner") && outcome.files !== undefined;
 
-    await shuffleAll();
+    await shuffleAll(examinerCondition);
     setupEvents();
 
-    if (window.location.href.includes("examiner") && outcome.files !== undefined) {
+    if (examinerCondition) {
         files = outcome.files;
         shapes = outcome.shapes;
 
@@ -32,6 +34,7 @@ const onPageLoad = async (outcome) => {
             let baseData = await getBase64(files[i]);
             responses.push(baseData);
         }
+
         await setupFun();
     }
 
@@ -42,32 +45,27 @@ const setupEvents = async () => {
     $("#randomizer").click(shuffleAll);
 
     document.getElementById("outsideAudio").addEventListener("ended", function() {
-        playing = -1;
         $(".playing").removeClass("playing");
+
+        if (audioOrder > -1) {
+            audioOrder++;
+            audioManager.playNewAudio("outside", selected[audioOrder] ? responses[audioOrder] : audioData[audioOrder], audioOrder);
+            if (audioOrder === 3) audioOrder = -1;
+        } else {
+            playing = -1;
+        }
     });
 
     $(".frame").each(function(index) {
         $(this).click(function() {
-            if (playing === -1 || playing !== index) {
-                playing = index;
+            audioOrder = -1;
 
-                if (selected[index]) {
-                    audioManager.playNewAudio("outside", responses[index]);
-                } else {
-                    audioManager.playNewAudio("outside", audioData[index]);
-                }
-    
-                $(".playing").removeClass("playing");
-                $(this).addClass("playing");
-            } else if (playing === index && $(this).hasClass("playing"))
-            {
+            if (playing === -1 || playing !== index) {
+                audioManager.playNewAudio("outside", selected[index] ? responses[index] : audioData[index], index);
+            } else if (playing === index && $(this).hasClass("playing")) {
                 audioManager.pause("outside");
-                $(".playing").removeClass("playing");
-            }
-            else if (playing === index && !$(this).hasClass("playing"))
-            {
-                audioManager.play("outside");
-                $(this).addClass("playing");
+            } else if (playing === index && !$(this).hasClass("playing")) {
+                audioManager.play("outside", index);
             }
         });
     });
@@ -76,6 +74,7 @@ const setupEvents = async () => {
         examine(false);
         $("#rating").addClass("closed");
     });
+
     $("#awardBtn").click(async function() {
         examine(true);
         await network.upload(data.taskDir, files);
@@ -131,9 +130,13 @@ const setupFun = async () => {
             startedFun = true;
 
             selected = [false, false, false, false];
-            await shuffleAll();
-            toggleFrame(3);
-            $("#checkboxes").removeClass("invisible");
+            let playPromise = shuffleAll();
+            playPromise.then(() => {
+                toggleFrame(3);
+                $("#checkboxes").removeClass("invisible");
+                audioOrder = 0;
+                audioManager.playNewAudio("outside", selected[0] ? responses[0] : audioData[0], 0);
+            });
         } else {
             shuffleAll();
         }
@@ -141,6 +144,10 @@ const setupFun = async () => {
 
     selected = [true, true, true, true];
     await view.setupFunView(shapes);
+
+    audioOrder = 0;
+    audioManager.pause("outside");
+    audioManager.playNewAudio("outside", selected[0] ? responses[0] : audioData[0], 0);
 }
 
 const toggleFrame = async (index) => {
@@ -184,11 +191,11 @@ const pickTopic = async () => {
     }
 }
 
-const shuffleAll = async () => {
+const shuffleAll = async (playInSuccession) => {
     audioManager.pause("outside");
-    $(".playing").removeClass("playing");
     playing = -1;
-
+    audioOrder = -1;
+    
     let promises = [];
 
     for (let i = 0; i < 4; i++) {
@@ -203,6 +210,15 @@ const shuffleAll = async () => {
             view.setNewShape(i);
         }
     }
+
+
+    let promise;
+    if (playInSuccession !== false) {
+        audioOrder = 0;
+        promise = audioManager.playNewAudio("outside", selected[0] ? responses[0] : audioData[0], 0);
+    }
+
+    return promise;
 }
 
 const shuffle = async (i) => {
