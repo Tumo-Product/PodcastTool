@@ -20,8 +20,8 @@ const onPageLoad = async (outcome) => {
     audioStream = await audioManager.getAudioStream();
     recorder = new Recorder(audioStream);
     controller.setup();
-    view.setInstructionText(data.intro);
     let examinerCondition = window.location.href.includes("examiner") && outcome.files !== undefined;
+    view.setInstructionText(examinerCondition ? data.examinerInstruction : data.intro);
 
     await shuffleAll(examinerCondition);
     setupEvents();
