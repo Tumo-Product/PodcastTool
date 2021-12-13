@@ -54,6 +54,7 @@ const controller = {
         $("#controller .button").unbind("click");
         $("#centerBtn").click(controller.recordClickHandler);
         $("#leftBtn").click(controller.pauseClickHandler);
+        audioManager.pause("my");
 
         controllerView.cancel();
         controller.playing = false;

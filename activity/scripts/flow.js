@@ -211,7 +211,6 @@ const shuffleAll = async (playInSuccession) => {
         }
     }
 
-
     let promise;
     if (playInSuccession !== false) {
         audioOrder = 0;
