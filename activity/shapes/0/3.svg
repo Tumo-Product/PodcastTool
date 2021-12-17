@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="174px" height="173px" viewBox="0 0 174 173" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>BE13F1C3-B665-4E00-B566-F300A687994D</title>
+    <title>50CC7A53-E2E8-47C8-9707-57D627A1210B</title>
     <g id="Podcast-Randomizer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Shapes" transform="translate(-1189.000000, -124.000000)">
-            <path d="M1276,157 C1305.82338,157 1330,181.176624 1330,211 C1330,240.823376 1305.82338,265 1276,265 C1246.17662,265 1222,240.823376 1222,211 C1222,181.176624 1246.17662,157 1276,157 Z M1276.5,187 C1262.96902,187 1252,197.969024 1252,211.5 C1252,225.030976 1262.96902,236 1276.5,236 C1290.03098,236 1301,225.030976 1301,211.5 C1301,197.969024 1290.03098,187 1276.5,187 Z" id="Combined-Shape" fill="#D8D8D8"></path>
-            <g id="Group-9" transform="translate(557.000000, 124.000000)"></g>
+        <g id="Shapes" transform="translate(-450.000000, -784.000000)">
+            <g id="Group-9" transform="translate(450.000000, 124.000000)"></g>
+            <polygon id="Polygon-Copy" fill="#D8D8D8" transform="translate(536.000000, 871.000000) rotate(-337.000000) translate(-536.000000, -871.000000) " points="536 823 569.941125 837.058875 584 871 569.941125 904.941125 536 919 502.058875 904.941125 488 871 502.058875 837.058875"></polygon>
         </g>
     </g>
 </svg>

@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="174px" height="173px" viewBox="0 0 174 173" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>70DD5EC2-C106-418F-B0ED-8092E2B103D1</title>
+    <title>7CC31940-D679-4476-9DF7-7B26D19AD9B7</title>
     <g id="Podcast-Randomizer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Shapes" transform="translate(-978.000000, -344.000000)">
-            <g id="Group-3" transform="translate(987.831003, 380.090322)" fill="#D8D8D8">
-                <polygon id="Polygon-Copy-4" transform="translate(38.132370, 54.000000) rotate(112.000000) translate(-38.132370, -54.000000) " points="30.2834786 32.9710481 87.8769984 33.1332157 45.9812621 75.0289519 -11.6122577 74.8667843"></polygon>
-                <polygon id="Polygon-Copy-5" transform="translate(77.409623, 54.000000) rotate(112.000000) translate(-77.409623, -54.000000) " points="69.5607314 32.9710481 127.154251 33.1332157 85.2585149 75.0289519 27.6649951 74.8667843"></polygon>
-                <polygon id="Polygon-Copy-6" transform="translate(119.305359, 54.000000) rotate(112.000000) translate(-119.305359, -54.000000) " points="111.456468 32.9710481 169.049987 33.1332157 127.154251 75.0289519 69.5607314 74.8667843"></polygon>
-            </g>
-            <g id="Group-9" transform="translate(557.000000, 124.000000)"></g>
+        <g id="Shapes" transform="translate(-660.000000, -564.000000)">
+            <path d="M747,596 C776.823376,596 801,620.176624 801,650 C801,679.823376 776.823376,704 747,704 C717.176624,704 693,679.823376 693,650 C693,620.176624 717.176624,596 747,596 Z M747.5,626 C733.969024,626 723,636.969024 723,650.5 C723,664.030976 733.969024,675 747.5,675 C761.030976,675 772,664.030976 772,650.5 C772,636.969024 761.030976,626 747.5,626 Z" id="Combined-Shape" fill="#D8D8D8"></path>
+            <g id="Group-9" transform="translate(450.000000, 124.000000)"></g>
         </g>
     </g>
 </svg>

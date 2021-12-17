@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="174px" height="173px" viewBox="0 0 174 173" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>50865C92-BF7F-492A-A869-7FC2B5F5E04E</title>
+    <title>7B210C72-3D4C-4C6B-AA60-80771FBF499B</title>
     <g id="Podcast-Randomizer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Shapes" transform="translate(-557.000000, -344.000000)">
-            <polygon id="Polygon-Copy" fill="#D8D8D8" points="643 390 688.650713 423.167184 671.213692 476.832816 614.786308 476.832816 597.349287 423.167184"></polygon>
-            <g id="Group-9" transform="translate(557.000000, 124.000000)"></g>
+        <g id="Shapes" transform="translate(-660.000000, -344.000000)">
+            <g id="Group-7" transform="translate(715.000000, 367.000000)" fill="#D8D8D8">
+                <circle id="Oval" cx="32" cy="32" r="32"></circle>
+                <circle id="Oval-Copy" cx="32" cy="96" r="32"></circle>
+            </g>
+            <g id="Group-9" transform="translate(450.000000, 124.000000)"></g>
         </g>
     </g>
 </svg>

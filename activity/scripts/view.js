@@ -1,9 +1,13 @@
 const view = {
     colors:["#966B9D", "#5c7ca6", "#9BC53D", "#FDE74C",
-            "#C2423F", "#427AA1", "#333333", "#EF767A",
+            "#C2423F", "#427AA1", "#EF767A",
             "#0B8654", "#BA9BB0", "#AF1B3F", "#FEC600",
             "#456A90", "#49BEAA", "#EA7317", "#003F91",
-            "#B1CF5F", "#F1AB86", "#5DA9E8", "#E8EF76"],
+            "#B1CF5F", "#F1AB86", "#5DA9E8", "#E8EF76",
+            "#454A90", "#BE49B9", "#EACE17", "#876EBE",
+            "#5FCFCF", "#DFB240", "#BD4E4E", "#299B8D",
+            "#459068", "#7B5179", "#F8F777", "#2A276F",
+            "#B3562A", "#DF4040", "#CDB8E2", "#8CBCB6"],
     previousStyles: [],
 
     replaceButton: async (which, button) => {
