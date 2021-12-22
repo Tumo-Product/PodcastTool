@@ -31,7 +31,7 @@ const view = {
     },
     
     setShape: async (index, svgIndex) => {
-        $(`#i_${index}`).css({"background-color": "#DB9191", "-webkit-mask": `url(shapes/${index}/${svgIndex}.svg)`});
+        $(`#i_${index}`).css({"background-color": "#DB9191", "-webkit-mask": `url(../shapes/${index}/${svgIndex}.svg)`});
     },
 
     setNewShape: async (index) => {
@@ -40,7 +40,7 @@ const view = {
         
         $(`#i_${index}`).removeClass("loading");
         $(`#i_${index}`).css("transition", "0s");
-        $(`#i_${index}`).css({"background-color": randomColor, "-webkit-mask": `url(shapes/${index}/${randomShapeIndex}.svg)`});
+        $(`#i_${index}`).css({"background-color": randomColor, "-webkit-mask": `url(../shapes/${index}/${randomShapeIndex}.svg)`});
         await timeout(500);
         $(`#i_${index}`).css("transition", "0.5s");
     },

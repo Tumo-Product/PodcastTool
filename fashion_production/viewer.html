@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast Randomizer Tool</title>
 
-    <link rel="stylesheet" href="styles/buttonStates.css">
-    <link rel="stylesheet" href="styles/controller.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/loader.css">
-    <link rel="stylesheet" href="styles/animations.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/buttonStates.css">
+    <link rel="stylesheet" href="../styles/controller.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/main.css">
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -53,7 +53,7 @@
         </div>
         
         <div id="topic" class="offscreenLeft">
-            <img src="icons/blankText.png" alt="">
+            <img src="../icons/blankText.png" alt="">
             <p></p>
         </div>
 
@@ -97,7 +97,7 @@
 
         <div id="randomizerContainer">
             <div class="button" id="randomizer">
-                <img src="icons/randomize.png" class="icon current" alt="" id="randomize">
+                <img src="../icons/randomize.png" class="icon current" alt="" id="randomize">
             </div>
             <div class="bar"></div>
             <div id="start" class="button"><p class="icon current">Faites le vôtre</p></div>
@@ -108,44 +108,44 @@
                 <div class="button circle deactivated" id="leftBtn">
                     <div class="inside"></div>
                     <div class="icon" id="record"></div>
-                    <img class="icon current" src="icons/pause.png" id="pause">
-                    <img class="icon" src="icons/cancel.png" id="cancel">
+                    <img class="icon current" src="../icons/pause.png" id="pause">
+                    <img class="icon" src="../icons/cancel.png" id="cancel">
                 </div>
                 
                 <div class="button circle" id="centerBtn">
                     <div class="inside"></div>
                     <div class="icon current" id="record"></div>
-                    <img class="icon" src="icons/pause.png" id="pause">
-                    <img class="icon" src="icons/play.png" id="play">
+                    <img class="icon" src="../icons/pause.png" id="pause">
+                    <img class="icon" src="../icons/play.png" id="play">
 
                     <div id="progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:0"></div>
                 </div>
 
                 <div class="button circle invisible" id="rightBtn">
                     <div class="inside"></div>
-                    <img class="icon current" src="icons/checkmark.png" id="confirm">
+                    <img class="icon current" src="../icons/checkmark.png" id="confirm">
                 </div>
             </div>
         </div>
 
         <div class="button circle under" id="shuffleTopic">
             <div class="inside"></div>
-            <img class="icon current" src="icons/shufflePlay.png" id="shufflePlay">
+            <img class="icon current" src="../icons/shufflePlay.png" id="shufflePlay">
         </div>
     </div>
 
     <audio src="" id="myAudio"></audio>
     <audio src="" id="outsideAudio"></audio>
 
-    <script src="scripts/activityManagerCallback.js"></script>
-    <script src="scripts/tools.js"></script>
-    <script src="scripts/network.js"></script>
-    <script src="scripts/loader.js"></script>
-    <script src="scripts/view.js"></script>
-    <script src="scripts/controller.js"></script>
-    <script src="scripts/recorder.js"></script>
-    <script src="scripts/audioManager.js"></script>
-    <script src="scripts/flow.js"></script>
+    <script src="../scripts/activityManagerCallback.js"></script>
+    <script src="../scripts/tools.js"></script>
+    <script src="../scripts/network.js"></script>
+    <script src="../scripts/loader.js"></script>
+    <script src="../scripts/view.js"></script>
+    <script src="../scripts/controller.js"></script>
+    <script src="../scripts/recorder.js"></script>
+    <script src="../scripts/audioManager.js"></script>
+    <script src="../scripts/flow.js"></script>
 </body>
 
 </html>
