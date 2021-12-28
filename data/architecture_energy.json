@@ -6,16 +6,16 @@
     "examinerInstruction": "Après examen, utilise les boutons « Acquis » ou « Non acquis » de l’outil. Les boutons qui sortent de l’outil seront traités conformément.",
 
     "topics": [
-        "Tu as décidé de changer de style de la tête au pieds. Complète chaque phrase en conséquence.",
-        "Tu as remarqué que tes pantalons préférés ont trop de trous. Complète chaque phrase en conséquence",
-        "Rappelle-toi de la dernière fois où tu as fait du shopping pour des vêtements. Réponds à chaque question en conséquence.",
-        "Souviens-toi du jour où tu es soudainement devenu·e trop grand·e pour tes vêtements. Réponds à chaque question en conséquence."
+        "Imagine que ta famille a décidé de rendre votre lieu d’habitation aussi écoénergétique que possible. Réponds à chaque question en conséquence.",
+        "Imagine que ta famille souhaite économiser le plus d'argent possible. Réponds à chaque question en conséquence.",
+        "Imagine que ta famille souhaite rendre votre maison entièrement auto-suffisante. Répondez à chaque question en conséquence.",
+        "Rappelle-toi de la dernière fois que ta famille s'est débarrassée ou a remplacé un appareil de cuisine. Réponds à chaque question en conséquence."
     ],
 
     "starters": [
-        "L'autre jour, j'ai regardé dans mon placard et…",
-        "Afin de résoudre ce problème, je…",
-        "Mais maintenant que j'en sais plus sur la mode et les déchets, j'aurais dû…",
-        "Si mes ami·es me posent des questions sur ce problème, je leur dirai…"
+        "Dans ma maison, il y avait un·e…",
+        "Un jour, il/elle a cessé de fonctionner et…",
+        "Ma famille a décidé de…",
+        "Après avoir pris cette décision, j'ai réalisé qu'il aurait été préférable de…"
     ]
 }

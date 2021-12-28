@@ -22,6 +22,7 @@ const onPageLoad = async (outcome) => {
     controller.setup();
     let examinerCondition = window.location.href.includes("examiner") && outcome.files !== undefined;
     view.setInstructionText(examinerCondition ? data.examinerInstruction : data.intro);
+    view.setStarterTexts(data.starters);
 
     await shuffleAll(examinerCondition);
     setupEvents();

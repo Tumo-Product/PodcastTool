@@ -19,6 +19,12 @@ const view = {
     openLoading: (index) => {
         $(`#i_${index}`).addClass("loading");
     },
+
+    setStarterTexts: (texts) => {
+        for (let i = 0; i < $(".starter").length; i++) {
+            $(`#s_${i} p`).html(texts[i]);
+        }
+    },
     
     switchStarter: (index) => {
         $(".starter").each(function() {
