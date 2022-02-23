@@ -9,7 +9,7 @@ class Recorder {
     }
 
     getBlob () {
-        return new Blob(this.chunks, { type: "video/webm" });
+        return new Blob(this.chunks, { type: "audio/webm" });
     }
 
     async getBaseAudio() {

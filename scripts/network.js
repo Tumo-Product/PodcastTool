@@ -26,7 +26,7 @@ const network = {
     
     upload: async (taskDir, files) => {
         for (let i = 0; i < files.length; i++) {
-            let fileName = generateHash(i) + ".wav";
+            let fileName = generateHash(i) + ".webm";
             let renamedFile = await network.renameFile(files[i], fileName);
 
             try {
