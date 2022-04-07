@@ -1,0 +1,21 @@
+{
+    "taskDir" : "podcast/green_engineering",
+    "intro": "Clique sur la flèche pour écouter les histoires des autres étudiant·es et sur chacune des cases pour réentendre l’histoire choisie. <br>Quand tu termines, clique sur le bouton « Enregistre le tien »  et procède.",
+    "recordingInstruction": "Appuie sur le bouton rouge pour commencer l’enregistrement. Tu peux mettre sur la pause ou recommencer. Tu peux même supprimer ton enregistrement et en faire une autre avant de choisir ta version finale. Pour nous l’envoyer, clique sur le bouton vert. Fais attention, une fois que tu nous envoies ton enregistrement, tu ne seras plus capable de le modifier.",
+    "funInstruction": "Clique sur la flèche pour réécouter tes réponses. Après tu peux choisir un ou deux de tes enregistrements en cliquant sur la case à cocher et en associant au hasard les réponses des autres étudiant·es pour écouter des histoires amusantes et instructives.",
+    "examinerInstruction": "Après examen, utilise les boutons « Acquis » ou « Non acquis » de l’outil. Les boutons qui sortent de l’outil seront traités conformément.",
+
+    "topics": [
+        "Imagine que tu aies besoin d'acheter une nouvelle paire de jeans. Réponds à chaque question en conséquence.",
+        "Pense à la dernière fois que tu es allé·e faire du shopping. Réponds à chaque question en conséquence.",
+        "Imagine que c’est la rentrée des classes et qu’il te faut de nouveaux vêtements.  Réponds à chaque question en conséquence.",
+        "Imagine que tu aies besoin d'acheter une nouvelle tenue de sport. Réponds à chaque question en conséquence."
+    ],
+
+    "starters": [
+        "Une fois que j'ai acheté…",
+        "Je ne savais pas ça...",
+        "La prochaine fois que j'achèterai un article comme celui-ci…",
+        "Je pense que la solution d'ingénierie verte qui résoudrait ce problème est…"
+    ]
+}
