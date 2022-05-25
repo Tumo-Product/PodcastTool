@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow: hidden;
+}
+
 .closedVertically {
     height: 0 !important;
     margin-top: 171px;
@@ -47,6 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 p {

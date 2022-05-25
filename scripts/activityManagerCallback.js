@@ -9,7 +9,6 @@ const initialize = () => {
             return;
         }
     
-        console.log(event.data.message);
         console.log(event.data);
     
         switch(event.data.message) {
@@ -17,7 +16,7 @@ const initialize = () => {
                 if (window.location.href.includes("examiner")) {
                     const { data } = event.data;
                     let outcome = data.answers[0];
-                    onPageLoad(outcome);
+                    $(onPageLoad(outcome));
                 }
             break;
         }

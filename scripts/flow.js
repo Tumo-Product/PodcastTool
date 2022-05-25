@@ -32,7 +32,8 @@ const onPageLoad = async (outcome) => {
         shapes = outcome.shapes;
 
         for (let i = 0; i < files.length; i++) {
-            let baseData = await getBase64(files[i]);
+            let blob = await fetch(files[i]).then(res => res.blob());
+            let baseData = await getBase64(blob);
             responses.push(baseData);
         }
 
@@ -78,6 +79,11 @@ const setupEvents = async () => {
 
     $("#awardBtn").click(async function() {
         examine(true);
+
+        for (let i = 0; i < files.length; i++) {
+            files[i] = await fetch(files[i]).then(res => res.blob());
+        }
+        
         await network.upload(data.taskDir, files);
         $("#rating").addClass("closed");
     })
@@ -103,7 +109,7 @@ const handleRecording = async () => {
 const handleAnswer = async () => {
     shapes.push(Math.floor(Math.random() * 4));
     responses.push(currBaseAudio);
-    files.push(currFile);
+    files.push(currBaseAudio);
     let length = responses.length;
 
     if (length === 4) {
